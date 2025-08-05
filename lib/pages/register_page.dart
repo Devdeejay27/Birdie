@@ -2,20 +2,23 @@ import 'package:birdie/components/my_button.dart';
 import 'package:birdie/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   final void Function()? onTap;
 
-  LoginPage({
+  RegisterPage({
     super.key,
     required this.onTap,
   });
 
   // text controllers
+  final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
-  // login method
-  void login() {}
+  // register method
+  void register() {}
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,13 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   ),
                   const SizedBox(height: 50),
+                  // username textfield
+                  MyTextfield(
+                    hintText: 'Username',
+                    obscureText: false,
+                    controller: usernameController,
+                  ),
+                  const SizedBox(height: 10),
                   // email textfield
                   MyTextfield(
                     hintText: 'Email',
@@ -56,31 +66,38 @@ class LoginPage extends StatelessWidget {
                     controller: passwordController,
                   ),
                   const SizedBox(height: 10),
+                  //confirm password textfield
+                  MyTextfield(
+                    hintText: 'Confirm Password',
+                    obscureText: true,
+                    controller: confirmPasswordController,
+                  ),
+
                   // forgot password
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Forgot Password?',
-                        style: TextStyle(
-                            color:
-                                Theme.of(context).colorScheme.inversePrimary),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.end,
+                  //   children: [
+                  //     Text(
+                  //       'Forgot Password?',
+                  //       style: TextStyle(
+                  //           color:
+                  //               Theme.of(context).colorScheme.inversePrimary),
+                  //     ),
+                  //   ],
+                  // ),
                   const SizedBox(height: 25),
-                  // sign in button
+                  // register button
                   MyButton(
-                    text: 'Login',
-                    onTap: login,
+                    text: 'Register',
+                    onTap: register,
                   ),
                   const SizedBox(height: 25),
-                  // don't have an account? Register here
+                  // already have an account? Login here
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account? ",
+                        "Already have an account? ",
                         style: TextStyle(
                             color:
                                 Theme.of(context).colorScheme.inversePrimary),
@@ -88,15 +105,15 @@ class LoginPage extends StatelessWidget {
                       GestureDetector(
                         onTap: onTap,
                         child: const Text(
-                          'Register here',
+                          'Login here',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.blueGrey,
                           ),
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
