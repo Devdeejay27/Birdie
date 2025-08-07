@@ -1,4 +1,4 @@
-import 'package:birdie/auth/login_or_register.dart';
+import 'package:birdie/auth/auth.dart';
 import 'package:birdie/firebase_options.dart';
 import 'package:birdie/themes/dark_mode.dart';
 import 'package:birdie/themes/light_mode.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Birdie',
-      home: const LoginOrRegister(),
+      home: const AuthPage(),
       theme: lightMode,
       darkTheme: darkMode,
     );
