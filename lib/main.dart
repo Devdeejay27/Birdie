@@ -1,5 +1,9 @@
 import 'package:birdie/auth/auth.dart';
+import 'package:birdie/auth/login_or_register.dart';
 import 'package:birdie/firebase_options.dart';
+import 'package:birdie/pages/home_page.dart';
+import 'package:birdie/pages/profile_page.dart';
+import 'package:birdie/pages/users_page.dart';
 import 'package:birdie/themes/dark_mode.dart';
 import 'package:birdie/themes/light_mode.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,6 +26,12 @@ class MyApp extends StatelessWidget {
       home: const AuthPage(),
       theme: lightMode,
       darkTheme: darkMode,
+      routes: {
+        '/login_register_page': (context) => const LoginOrRegister(),
+        '/home_page': (context) => const HomePage(),
+        '/profile_page': (context) => ProfilePage(),
+        '/users_page': (context) => const UsersPage(),
+      },
     );
   }
 }
