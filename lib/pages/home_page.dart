@@ -1,4 +1,5 @@
 import 'package:birdie/components/my_drawer.dart';
+import 'package:birdie/components/my_list_tile.dart';
 import 'package:birdie/components/my_post_button.dart';
 import 'package:birdie/components/my_textfield.dart';
 import 'package:birdie/database/firestore.dart';
@@ -99,21 +100,9 @@ class HomePage extends StatelessWidget {
                   Timestamp timestamp = post['TimeStamp'];
 
                   // return as a list tile
-                  return Padding(
-                    padding: const EdgeInsets.only(
-                      left: 10.0,
-                      right: 10,
-                      bottom: 10,
-                    ),
-                    child: ListTile(
-                      title: Text(message),
-                      subtitle: Text(
-                        userEmail,
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                      ),
-                    ),
+                  return MyListTile(
+                    title: message,
+                    subTitle: userEmail,
                   );
                 },
               ));
