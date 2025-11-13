@@ -1,16 +1,51 @@
-# birdie
+# 🚀 Birdie
 
-A new Flutter project.
+# Description
 
-## Getting Started
+An app to post thoughts and opinions as well as viewing other users thoughts and opinions.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🖼️ Demo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![App Demo](assets/Birdie.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧠 Tech Stack
+
+**Frontend:** Dart, Flutter
+
+**Backend:** Firebase
+
+**Database:** Firestore
+
+**Other Tools:** Git
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+
+git clone https://github.com/devdeejay27/birdie.git
+
+cd birdie
+
+### 2. Install dependencies
+
+flutter clean
+
+flutter pub get
+
+### 3. Run the app in terminal
+
+flutter run
+
+## 👨‍💻 Author
+
+Chukwudumeje Obieli
+
+@devdeejay27
+
+📧 dum_obieli@yahoo.com
